@@ -2,6 +2,9 @@
   padding: 1.5rem 1rem;
   position: fixed;
   width: 100vw;
+  box-shadow: 0px 0px 20px rgba(59, 59, 59, 0.233);
+  background: white;
+  z-index: 10;
   .nav-container {
     width: 100%;
     max-width: 1280px;
@@ -21,6 +24,7 @@
       display: flex;
       gap: 2rem;
       height: unset;
+      align-items: center;
       .nav-item {
       }
     }
@@ -50,6 +54,7 @@
         padding-left: 1rem;
         flex-direction: column;
         background: white;
+        align-items: flex-start;
         .nav-item {
           text-align: left;
           font-weight: 500;

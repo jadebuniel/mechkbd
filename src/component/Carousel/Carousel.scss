@@ -1,0 +1,219 @@
+.carousel {
+  height: clamp(300px, 60vw, 600px);
+  transform: translateY(86px);
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  max-width: 3000px;
+  margin: 0 auto;
+  .carousel-cell {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .carousel-overlay-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.267);
+      display: flex;
+      align-items: center;
+      padding: 0 7rem;
+    }
+    .carousel-overlay-center {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.267);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 7rem;
+    }
+    .carousel-overlay-right {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.267);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 7rem;
+    }
+    .overlay-container {
+      .carousel-header {
+        color: white;
+        font-size: 2.5rem;
+        animation: fadeup 0.5s ease-in-out forwards;
+        opacity: 0;
+      }
+      .carousel-desc {
+        color: #f5f5f5;
+        font-size: 1.4rem;
+        margin-top: 0.5rem;
+        animation: fadeup 0.5s ease-in-out forwards;
+        animation-delay: 0.2s;
+        opacity: 0;
+      }
+      .carousel-btn {
+        display: block;
+        margin-top: 1.5rem;
+        font-size: 1.25rem;
+        background: #fca311;
+        border: #fca311 solid 3px;
+        border-radius: 5px;
+        color: white;
+        font-weight: 700;
+        padding: 0.6rem 1.8rem;
+        cursor: pointer;
+        outline: #000;
+        animation: fadeup 0.5s ease-in-out forwards;
+        animation-delay: 0.3s;
+        opacity: 0;
+
+        &:hover {
+          background: none;
+          border: #fca311 solid 3px;
+        }
+      }
+    }
+  }
+  .center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .right {
+    text-align: right;
+    margin-left: auto;
+  }
+  .carousel-1 {
+    background: url("https://external-preview.redd.it/YZxKvJoGDFzY8iWe94-e5IfJtAgXnJ_ofV3HW6sCRYU.jpg?auto=webp&s=6cd7d4628521959e886f1c4353c89e3655080f61")
+      no-repeat center;
+    background-size: cover;
+  }
+  .carousel-2 {
+    background: url("https://cdn.shopify.com/s/files/1/1674/0405/products/Untitled-2_4ff2fd50-2595-4136-ba27-977b76a96e4d_1480x.png?v=1552595270")
+      no-repeat center;
+    background-size: cover;
+  }
+  .carousel-3 {
+    background: url("https://voltcave.com/wp-content/uploads/2020/04/noonite-wavez-mechanical-keyboard.jpg")
+      no-repeat center;
+    background-size: cover;
+  }
+  .carousel-4 {
+    background: url("https://cdn.shopify.com/s/files/1/0549/2681/files/holypanda1.jpg?v=1598999268")
+      no-repeat center;
+    background-size: cover;
+  }
+  .carousel-5 {
+    background: url("https://previews.dropbox.com/p/thumb/ABBaTTKhXLiXLFPMMEW8Vf7T4H_P9fvWjulr0x89nflrAJ4FBfwo9rvzth9kNiOVIDPR0yt_Rjb48ijps-OlCK0tPFCAQgFexuTQlqibTOPCqmmFz2NsRURAEVKq1z0XUnMGA7_kPLv8OCac9U8ViuP6dKUVyyDxdfXUHpOfjOicMzAY-9DLzX_ir0vciPdlsdJQNvBLACmLbXWK7BuhK6NNsZbWLKAYWq3tJfOH_TYhNm8VXjyo6g75IDfzDxwfcncklTTKnbBrVTsDjdtylm_QbNWTypXYxQhfHrb13YtDPbxjbdNgPTfbkTR_OnlNm73lzfwMVtezhvz_H6FxlQTdj6xVMcfFE9R8V1Ap3_kajA/p.jpeg?size=2048x1536&size_mode=3")
+      no-repeat center;
+    background-size: cover;
+  }
+  & > button {
+    position: absolute;
+    outline: none;
+    border: none;
+    background: none;
+    color: rgba(255, 255, 255, 0.514);
+    font-size: 3rem;
+    cursor: pointer;
+    transform: translateY(-50%) scale(1.1);
+    transition: 100ms all ease;
+    &:hover {
+      transform: scale(1) translateY(-50%);
+      color: white;
+    }
+  }
+  .prev-btn {
+    left: 20px;
+    top: 50%;
+  }
+  .next-btn {
+    right: 20px;
+    top: 50%;
+  }
+  .bar-container {
+    position: absolute;
+    bottom: 5rem;
+    display: flex;
+    width: 100vw;
+    gap: clamp(5px, 2%, 20px);
+    justify-content: center;
+    max-width: 3000px;
+    .bar {
+      height: 3px;
+      width: clamp(20px, 3%, 50px);
+      background: rgba(255, 255, 255, 0.329);
+    }
+    .bar.active {
+      background: white;
+    }
+  }
+}
+
+@keyframes carouselAnim {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .bar-container {
+    bottom: 3rem !important;
+  }
+  .carousel-overlay-left,
+  .carousel-overlay-right,
+  .carousel-overlay-center {
+    padding: 0 2rem !important;
+  }
+
+  .carousel-header {
+    font-size: 2rem !important;
+  }
+  .carousel-desc {
+    font-size: 1rem !important;
+  }
+  .carousel-btn {
+    font-size: 1rem !important;
+    margin-top: 1rem !important;
+    padding: 0.2rem 0.8rem !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .carousel-overlay-left,
+  .carousel-overlay-right {
+    justify-content: center !important;
+  }
+  .right {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  .left {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+}
