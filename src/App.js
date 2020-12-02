@@ -1,5 +1,7 @@
 import './App.css';
 import Carousel from './component/Carousel/Carousel';
+import Categories from './component/Categories/Categories';
+import Featured from './component/Featured/Featured';
 import Nav from './component/Nav/Nav';
 
 function App() {
@@ -7,6 +9,8 @@ function App() {
     <div className="App">
         <Nav/>
         <Carousel/>
+        <Categories/>
+        <Featured/>
     </div>
   );
 }

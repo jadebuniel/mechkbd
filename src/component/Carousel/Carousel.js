@@ -27,11 +27,11 @@ const Carousel = () => {
   <div className="carousel">
   {current === 0 && (
    <div className="carousel-cell carousel-1" style={{animation: "carouselAnim 1s ease forwards"}}>
-    <div className="carousel-overlay-left">
+    <div className="carousel-overlay-right">
       <div className="overlay-container">
-           <h2 className="carousel-header left">Miami Nights</h2>
-           <p className="carousel-desc left">Lorem ipsum dolor.</p>
-           <button className="carousel-btn left">View Details</button>
+           <h2 className="carousel-header right">Miami Nights</h2>
+           <p className="carousel-desc right">Lorem ipsum dolor.</p>
+           <button className="carousel-btn right">View Details</button>
       </div>
     </div>
    </div>
@@ -39,11 +39,11 @@ const Carousel = () => {
    
   {current === 1 && (
    <div className="carousel-cell carousel-2" style={{animation: "carouselAnim 1s ease forwards"}}>
-      <div className="carousel-overlay-left">
+      <div className="carousel-overlay-right">
        <div className="overlay-container">
-            <h2 className="carousel-header left">GMK TA 90</h2>
-            <p className="carousel-desc left">Lorem ipsum dolor.</p>
-            <button className="carousel-btn left">View Details</button>
+            <h2 className="carousel-header right">GMK TA 90</h2>
+            <p className="carousel-desc right">Lorem ipsum dolor.</p>
+            <button className="carousel-btn right">View Details</button>
        </div>
     </div>
    </div>
@@ -51,11 +51,11 @@ const Carousel = () => {
 
    {current === 2 && (
    <div className="carousel-cell carousel-3" style={{animation: "carouselAnim 1s ease forwards"}}>
-     <div className="carousel-overlay-right">
+     <div className="carousel-overlay-left">
        <div className="overlay-container">
-            <h2 className="carousel-header right">KBD67 MK I</h2>
-            <p className="carousel-desc right">Lorem ipsum dolor.</p>
-            <button className="carousel-btn right">View Details</button>
+            <h2 className="carousel-header left">KBD67 MK I</h2>
+            <p className="carousel-desc left">Lorem ipsum dolor.</p>
+            <button className="carousel-btn left">View Details</button>
        </div>
     </div>
    </div>
@@ -63,11 +63,11 @@ const Carousel = () => {
 
    {current === 3 && (
    <div className="carousel-cell carousel-4" style={{animation: "carouselAnim 1s ease forwards"}}>
-     <div className="carousel-overlay-right">
+     <div className="carousel-overlay-left">
        <div className="overlay-container">
-            <h2 className="carousel-header right">Glorious Holy Panda</h2>
-            <p className="carousel-desc right">Lorem ipsum dolor.</p>
-            <button className="carousel-btn right">View Details</button>
+            <h2 className="carousel-header left">Glorious Holy Panda</h2>
+            <p className="carousel-desc left">Lorem ipsum dolor.</p>
+            <button className="carousel-btn left">View Details</button>
        </div>
     </div>
    </div>

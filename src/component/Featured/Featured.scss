@@ -1,0 +1,64 @@
+.featured {
+  width: 100%;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  margin: 0 auto;
+  margin-top: 5rem;
+  gap: 1rem;
+  position: relative;
+  padding: 0 1rem;
+  .featured-firstrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .featured-secondrow {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .featured-card {
+    position: relative;
+    height: 100%;
+    .featured-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      .featured-header {
+        color: white;
+        font-size: clamp(1rem, 5vw, 2rem);
+      }
+      .featured-btn {
+        border: #fca311 3px solid;
+        background: #fca311;
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        font-weight: 700;
+        padding: 0.5rem 1.5rem;
+        width: clamp(110px, 20vw, 130px);
+        border-radius: 5px;
+        margin-top: 1.5rem;
+        color: white;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+@media screen and (max-width: 980px) {
+  .featured {
+    grid-template-columns: 1fr;
+  }
+}
