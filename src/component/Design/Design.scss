@@ -1,0 +1,68 @@
+.design {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  .design-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.15);
+    width: calc(100% - 2rem);
+    height: 99%;
+    margin: 0 1rem;
+    padding: 3rem 2rem;
+    .design-header {
+      color: white;
+      letter-spacing: 0.5px;
+      font-size: clamp(1.3rem, 5vw, 2.25rem);
+    }
+    .design-desc {
+      color: rgb(238, 238, 238);
+      margin-top: 1rem;
+      font-size: clamp(0.7rem, 2vw, 1.5rem);
+    }
+    .design-btn {
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      outline: none;
+      border: #fca311 3px solid;
+      background: #fca311;
+      color: white;
+      margin-top: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    height: clamp(300px, 90vw, 600px);
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 560px) {
+  .design-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .design-header {
+    text-align: center;
+  }
+  .design-desc {
+    text-align: center;
+    margin-top: 0.5rem !important;
+  }
+  .design-btn {
+    display: block;
+    margin: 0 auto;
+    font-size: clamp(14px, 2vw, 1rem) !important;
+    margin-top: 1rem !important;
+  }
+}

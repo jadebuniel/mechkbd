@@ -41,10 +41,10 @@
         font-size: clamp(0.8rem, 2vw, 1rem);
         font-weight: 700;
         padding: 0.5rem 1.5rem;
-        width: clamp(110px, 20vw, 130px);
         border-radius: 5px;
         margin-top: 1.5rem;
         color: white;
+        cursor: pointer;
 
         &:hover {
           background: none;
@@ -60,5 +60,10 @@
 @media screen and (max-width: 980px) {
   .featured {
     grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 560px) {
+  .featured-btn {
+    padding: 0.5rem 1rem !important;
   }
 }

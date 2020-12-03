@@ -1,0 +1,7 @@
+.video {
+  width: 100%;
+  max-width: 1280px;
+  height: clamp(300px, 60vw, 770px);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
