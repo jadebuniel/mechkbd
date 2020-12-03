@@ -27,6 +27,11 @@
       gap: 2rem;
       height: unset;
       align-items: center;
+      .nav-item {
+        &:hover {
+          color: gray;
+        }
+      }
     }
   }
 }

@@ -1,24 +1,15 @@
 import './App.css';
-import Carousel from './component/Carousel/Carousel';
-import Categories from './component/Categories/Categories';
-import Design from './component/Design/Design';
-import Featured from './component/Featured/Featured';
-import Footer from './component/Footer/Footer';
-import Nav from './component/Nav/Nav';
-import Social from './component/Social/Social';
-import Video from './component/Video/Video';
+import { Switch, Route } from "react-router-dom"
+import Home from './pages/Home';
+import Products from './pages/Products';
 
 function App() {
   return (
     <div className="App">
-        <Nav/>
-        <Carousel/>
-        <Categories/>
-        <Featured/>
-        <Video/>
-        <Social/>
-        <Design/>
-        <Footer/>
+        <Switch>
+          <Route path='/' exact component={Home}/>
+          <Route path='/products' exact component={Products}/>
+        </Switch>
     </div>
   );
 }

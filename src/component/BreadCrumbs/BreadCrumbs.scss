@@ -1,0 +1,23 @@
+.bread-crumbs {
+  transform: translateY(86px);
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  align-items: center;
+  .home {
+    color: rgb(93, 93, 240);
+    font-size: 1.25rem;
+  }
+  span {
+    font-size: 1.25rem;
+    color: #c2c2c2;
+  }
+  .current-page {
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    color: #c2c2c2;
+  }
+}
