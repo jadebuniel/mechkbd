@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Featured.scss"
+import { gsap, Power3 } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 
 const data1 = [
@@ -28,14 +32,120 @@ const data2 =[
 ]
 
 const Featured = () => {
+
+  useEffect(() => {
+    gsap.from(".header-0", {
+      scrollTrigger: {
+        trigger: '.header-0',
+        start: "top bottom"
+      },
+      y: 50,
+      opacity: 0,
+      duration: .8,
+      ease: Power3.easeIn
+    })
+    gsap.from(".header-1", {
+      scrollTrigger: {
+        trigger: '.header-1',
+        start: "top bottom"
+      },
+      y: 50,
+      opacity: 0,
+      duration: .8,
+      ease: Power3.easeIn
+    })
+    gsap.from(".header-2", {
+      scrollTrigger: {
+        trigger: '.header-2',
+        start: "top bottom"
+      },
+      y: 50,
+      opacity: 0,
+      duration: .8,
+      ease: Power3.easeIn
+    })
+    gsap.from(".header-3", {
+      scrollTrigger: {
+        trigger: '.header-3',
+        start: "top bottom"
+      },
+      y: 50,
+      opacity: 0,
+      duration: .8,
+      ease: Power3.easeIn
+    })
+    gsap.from(".header-4", {
+      scrollTrigger: {
+        trigger: '.header-4',
+        start: "top bottom"
+      },
+      y: 50,
+      opacity: 0,
+      duration: .8,
+      ease: Power3.easeIn
+    })
+    gsap.from(".btn-0", {
+      scrollTrigger: {
+        trigger: '.btn-0',
+        start: "top bottom"
+      },
+      y: 50,
+      opacity: 0,
+      duration: .8,
+      ease: Power3.easeIn
+    })
+    gsap.from(".btn-1", {
+      scrollTrigger: {
+        trigger: '.btn-1',
+        start: "top bottom"
+      },
+      y: 50,
+      opacity: 0,
+      duration: .8,
+      ease: Power3.easeIn
+    })
+    gsap.from(".btn-2", {
+      scrollTrigger: {
+        trigger: '.btn-2',
+        start: "top bottom"
+      },
+      y: 50,
+      opacity: 0,
+      duration: .8,
+      ease: Power3.easeIn
+    })
+    gsap.from(".btn-3", {
+      scrollTrigger: {
+        trigger: '.btn-3',
+        start: "top bottom"
+      },
+      y: 50,
+      opacity: 0,
+      duration: .8,
+      ease: Power3.easeIn
+    })
+    gsap.from(".btn-4", {
+      scrollTrigger: {
+        trigger: '.btn-4',
+        start: "top bottom"
+      },
+      y: 50,
+      opacity: 0,
+      duration: .8,
+      ease: Power3.easeIn
+    })
+
+  }, [])
+
+
  return (
   <div className="featured">
    <div className="featured-firstrow">
    {data1.map((da, index) => (
     <div className="featured-card" key={index}>
      <div className="featured-overlay">
-      <h3 className="featured-header">{da.name}</h3>
-      <button className="featured-btn">Pre-order</button>
+      <h3 className={`featured-header header-${index}`}>{da.name}</h3>
+      <button className={`featured-btn btn-${index}`}>Pre-order</button>
      </div>
      <img src={da.url} alt=""/>
     </div>
@@ -45,8 +155,8 @@ const Featured = () => {
    {data2.map((da, index) => (
     <div className="featured-card" key={index}>
      <div className="featured-overlay">
-      <h3 className="featured-header">{da.name}</h3>
-      <button className="featured-btn">Pre-order</button>
+      <h3 className={`featured-header header-${index + 2}`}>{da.name}</h3>
+      <button className={`featured-btn btn-${index + 2}`}>Pre-order</button>
      </div>
      <img src={da.url} alt=""/>
     </div>

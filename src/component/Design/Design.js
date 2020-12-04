@@ -1,7 +1,37 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Design.scss"
+import { gsap, Power3 } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Design = () => {
+ useEffect(() => {
+  gsap.from('.design-header', {
+   scrollTrigger: {trigger: '.design-header', start: 'top bottom'},
+   y: 50,
+   opacity: 0,
+   duration: .8,
+   ease: Power3.easeIn
+  })
+  gsap.from('.design-desc', {
+   scrollTrigger: {trigger: '.design-header', start: 'top bottom'},
+   y: 50,
+   opacity: 0,
+   duration: .8,
+   ease: Power3.easeIn,
+   delay: .3
+  })
+  gsap.from('.design-btn', {
+   scrollTrigger: {trigger: '.design-header', start: 'top bottom'},
+   y: 50,
+   opacity: 0,
+   duration: .8,
+   ease: Power3.easeIn,
+   delay: .5
+  })
+ }, [])
+
  return (
   <div className="design">
    <div className="design-overlay">

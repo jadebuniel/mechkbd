@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Social.scss"
+import { gsap, Power3 } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 const icons = [
  {
@@ -21,12 +25,25 @@ const icons = [
 ]
 
 const Social = () => {
+ useEffect(() => {
+  gsap.from('.social-icons', {
+   scrollTrigger: {
+    trigger: ".social-icons",
+    start: "top bottom"
+   },
+   scale: .5,
+   duration: .5,
+   stagger: .25,
+   ease: Power3.easeIn
+  })
+ }, [])
+
  return (
   <div className="social">
    <p className="social-invite">Follow our official accounts</p>
    <div className="social-container">
     {icons.map((icon, index) => (
-     <img src={icon.url} alt={icon.name} key={index}/>
+     <img src={icon.url} alt={icon.name} key={index} className="social-icons"/>
     ))}
    </div>
    
