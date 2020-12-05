@@ -1,0 +1,38 @@
+.sort {
+  margin-top: 1.8rem;
+  background: rgb(240, 240, 240);
+  padding: 0.6rem 1rem;
+  width: 100%;
+
+  .view-as {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-end;
+    .view-header {
+      color: rgb(75, 75, 75);
+      font-size: 1rem;
+    }
+    .view-icon {
+      display: flex;
+      gap: 0.3rem;
+      i {
+        display: block;
+        font-size: 1.2rem;
+        color: gray;
+        cursor: pointer;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+.view-active {
+  color: #fca311 !important;
+}
+@media screen and (max-width: 560px) {
+  .sort {
+    margin-top: 1rem;
+  }
+}

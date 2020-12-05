@@ -9,6 +9,7 @@ import Social from '../component/Social/Social'
 import Video from '../component/Video/Video'
 
 const Home = () => {
+ document.title = `MechKBD - Keyboard Enthusiasts One Stop Shop`
  return (
   <div>
    <Nav/>

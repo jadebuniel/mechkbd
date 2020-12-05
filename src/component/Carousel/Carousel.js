@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import "./Carousel.scss"
+import { Link } from "react-router-dom"
 
 const images = ["carousel1", "carousel2", "carousel3", "carousel4", "carousel5"]
 
@@ -31,7 +32,7 @@ const Carousel = () => {
       <div className="overlay-container">
            <h2 className="carousel-header right">Miami Nights</h2>
            <p className="carousel-desc right">Lorem ipsum dolor.</p>
-           <button className="carousel-btn right">View Details</button>
+           <Link to="/products"><button className="carousel-btn right">Shop Now</button></Link>
       </div>
     </div>
    </div>
@@ -43,7 +44,7 @@ const Carousel = () => {
        <div className="overlay-container">
             <h2 className="carousel-header right">GMK TA 90</h2>
             <p className="carousel-desc right">Lorem ipsum dolor.</p>
-            <button className="carousel-btn right">View Details</button>
+            <Link to="/products"><button className="carousel-btn right">Shop Now</button></Link>
        </div>
     </div>
    </div>
@@ -55,7 +56,7 @@ const Carousel = () => {
        <div className="overlay-container">
             <h2 className="carousel-header left">KBD67 MK I</h2>
             <p className="carousel-desc left">Lorem ipsum dolor.</p>
-            <button className="carousel-btn left">View Details</button>
+            <Link to="/products"><button className="carousel-btn left">Shop Now</button></Link>
        </div>
     </div>
    </div>
@@ -67,7 +68,7 @@ const Carousel = () => {
        <div className="overlay-container">
             <h2 className="carousel-header left">Glorious Holy Panda</h2>
             <p className="carousel-desc left">Lorem ipsum dolor.</p>
-            <button className="carousel-btn left">View Details</button>
+            <Link to="/products"><button className="carousel-btn left">Shop Now</button></Link>
        </div>
     </div>
    </div>
@@ -79,7 +80,7 @@ const Carousel = () => {
        <div className="overlay-container">
             <h2 className="carousel-header center">Year-end Sale</h2>
             <p className="carousel-desc center">Lorem ipsum dolor.</p>
-            <button className="carousel-btn center">Shop Now</button>
+            <Link to="/products"><button className="carousel-btn center">Shop Now</button></Link>
        </div>
     </div>
    </div>

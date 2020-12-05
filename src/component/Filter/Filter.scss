@@ -1,19 +1,42 @@
 .filter {
   margin-top: 2rem;
   grid-column: 1/2;
-  .filter-container {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    margin: 1rem 0.5rem;
-    input {
-      cursor: pointer;
-    }
-    label {
-      cursor: pointer;
-      &:hover {
-        color: rgb(93, 93, 240);
+  .filter-content {
+    .filter-container {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin: 1rem 0.2rem;
+      input {
+        cursor: pointer;
       }
+      label {
+        cursor: pointer;
+        color: gray;
+        &:hover {
+          color: rgb(93, 93, 240);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .filter {
+    grid-column: 1/6;
+    .filter-content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      .filter-container {
+        margin: 0.2rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 440px) {
+  .filter {
+    .filter-content {
+      grid-template-columns: repeat(2, 1fr) !important;
     }
   }
 }

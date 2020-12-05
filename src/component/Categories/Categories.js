@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Category.scss"
+import { Link } from 'react-router-dom'
 
 const data = [
  {
@@ -25,8 +26,8 @@ const Categories = () => {
   <div className="categories">
     {data.map((da, index) => (
       <div className="category-card" key={index}>
-       <img src={da.url} alt="" className="category-image"/>
-       <h3 className="category-name">{da.type}</h3>
+       <Link to={`/products/${da.type}`}><img src={da.url} alt="" className="category-image"/></Link>
+       <Link to={`/products/${da.type}`}><h3 className="category-name">{da.type}</h3></Link>
       </div>
     ))}
   </div>

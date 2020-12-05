@@ -21,3 +21,6 @@ li {
 a {
   outline: none;
 }
+html {
+  scroll-behavior: smooth;
+}

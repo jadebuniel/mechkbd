@@ -1,0 +1,10 @@
+.content-container {
+  width: 100%;
+  grid-column: 2/6;
+}
+
+@media screen and (max-width: 560px) {
+  .content-container {
+    grid-column: 1/6 !important;
+  }
+}
