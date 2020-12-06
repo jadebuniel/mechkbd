@@ -10,6 +10,13 @@ const info = {
  details: "View our in-stock and pre-order products."
 }
 
+const prev = [
+ {
+  name: "Home",
+  url: "/"
+ }
+]
+
 const Products = () => {
  document.title = `Product List - MechKBD`
  useEffect(() => {
@@ -18,7 +25,7 @@ const Products = () => {
  return (
   <div>
    <Nav/>
-   <BreadCrumbs page={info.name}/>
+   <BreadCrumbs page={info.name} previous={prev}/>
    <PageHeader name={info.name} desc={info.details}/>
    <ProductContents/>
    <Footer/>

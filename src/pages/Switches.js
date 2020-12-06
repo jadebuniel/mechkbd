@@ -11,6 +11,17 @@ const info = {
  details: "View our in-stock and pre-order switches"
 }
 
+const prev = [
+ {
+  name: "Home",
+  url: "/"
+ },
+  {
+  name: "Product List",
+  url: "/products"
+ }
+]
+
 const Switches = () => {
   document.title = `Switches - MechKBD`
   useEffect(() => {
@@ -19,7 +30,7 @@ const Switches = () => {
  return (
   <div>
    <Nav/>
-   <BreadCrumbs page={info.name}/>
+   <BreadCrumbs page={info.name} previous={prev}/>
    <PageHeader name={info.name} desc={info.details}/>
    <ProductContents/>
    <Footer/>

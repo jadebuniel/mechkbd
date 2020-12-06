@@ -11,6 +11,18 @@ const info = {
  details: "View our in-stock and pre-order keyboards"
 }
 
+const prev = [
+ {
+  name: "Home",
+  url: "/"
+ },
+  {
+  name: "Product List",
+  url: "/products"
+ }
+]
+
+
 const Keyboards = () => {
   document.title = `Keyboards - MechKBD`
   useEffect(() => {
@@ -19,7 +31,7 @@ const Keyboards = () => {
  return (
   <div>
    <Nav/>
-   <BreadCrumbs page={info.name}/>
+   <BreadCrumbs page={info.name} previous={prev}/>
    <PageHeader name={info.name} desc={info.details}/>
    <ProductContents/>
    <Footer/>
