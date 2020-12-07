@@ -5,6 +5,7 @@ import ProductCard from '../ProductCard/ProductCard'
 import "./ProductList.scss"
 const ProductList = () => {
  const [products, , loading] = useContext(Context)
+ console.log(products)
  return (
   <div className="product-list">
    {loading ? <PreLoader/> : products.map((product, index) => (

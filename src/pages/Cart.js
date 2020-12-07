@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../component/Footer/Footer'
 import Nav from '../component/Nav/Nav'
 import PageHeader from '../component/PageHeader/PageHeader'
@@ -18,12 +18,17 @@ const prev = [
 ]
 
 const Cart = () => {
+   document.title = `Cart - MechKBD`
+  useEffect(() => {
+   window.scrollTo(0,0)
+ }, [])
  return (
   <div>
    <Nav/>
    <BreadCrumbs page={info.name} previous={prev}/>
    <PageHeader name={"Your Cart "}/>
    <CartContent/>
+   <Footer/>
   </div>
  )
 }

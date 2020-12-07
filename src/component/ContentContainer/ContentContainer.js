@@ -6,7 +6,6 @@ import './ContentContainer.scss'
 const ContentContainer = () => {
  return (
   <div className="content-container">
-   <Sort/>
    <ProductList/>
   </div>
  )

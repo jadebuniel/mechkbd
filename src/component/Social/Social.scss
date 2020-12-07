@@ -19,9 +19,8 @@
     img {
       width: clamp(100px, 30vw, 160px);
       flex: 0 1 100px;
-
       &:hover {
-        transform: scale(1.05);
+        transform: scale(1.05) !important;
       }
     }
   }

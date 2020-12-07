@@ -26,7 +26,7 @@ const FilledCart = () => {
           <th>Product</th>
           <th>Price</th>
           <th>Quantity</th>
-          <th>Total</th>
+          <th className="total-header">Total</th>
         </tr>
       </thead>
       <tbody>
@@ -47,7 +47,6 @@ const FilledCart = () => {
 const CartList = () => {
    const [cart] = useContext(CartContext)
    const [loaded, setLoaded] = useState(false)
-
  return (
   <>
   {Object.keys(cart).length === 0 ? <EmptyCart/> : cart.line_items.length ? <FilledCart/> : <EmptyCart/>}

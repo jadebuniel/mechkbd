@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Carousel from '../component/Carousel/Carousel'
 import Categories from '../component/Categories/Categories'
 import Design from '../component/Design/Design'
@@ -10,6 +10,9 @@ import Video from '../component/Video/Video'
 
 const Home = () => {
  document.title = `MechKBD - Keyboard Enthusiasts One Stop Shop`
+   useEffect(() => {
+   window.scrollTo(0,0)
+ }, [])
  return (
   <div>
    <Nav/>

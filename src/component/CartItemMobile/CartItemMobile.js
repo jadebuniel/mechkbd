@@ -9,7 +9,6 @@ const CartItemMobile = ({item}) => {
   const {cart} = await commerce.cart.update(productId, {quantity})
   setCart(cart)
  }
- console.log(item)
  return (
   <div className="cart-item">
    <div className="product">

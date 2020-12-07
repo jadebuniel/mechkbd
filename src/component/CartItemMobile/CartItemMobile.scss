@@ -6,6 +6,7 @@
     margin: 1rem 0;
     border: 2px solid #f5f5f5;
     padding: 1rem 0.5rem;
+    min-width: 265px;
     .product {
       display: flex;
       gap: clamp(0.5rem, 5vw, 5rem);
@@ -54,7 +55,7 @@
     }
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
   .cart-list-mobile {
     display: block !important;
   }

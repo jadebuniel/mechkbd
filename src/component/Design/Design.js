@@ -8,14 +8,14 @@ gsap.registerPlugin(ScrollTrigger)
 const Design = () => {
  useEffect(() => {
   gsap.from('.design-header', {
-   scrollTrigger: {trigger: '.design-header', start: 'top bottom'},
+   scrollTrigger: {trigger: '.design-header', start: 'top 80%'},
    y: 50,
    opacity: 0,
    duration: .8,
    ease: Power3.easeIn
   })
   gsap.from('.design-desc', {
-   scrollTrigger: {trigger: '.design-header', start: 'top bottom'},
+   scrollTrigger: {trigger: '.design-header', start: 'top 80%'},
    y: 50,
    opacity: 0,
    duration: .8,

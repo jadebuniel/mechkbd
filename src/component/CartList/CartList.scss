@@ -41,6 +41,9 @@
           padding: 1rem;
           border: none;
         }
+        .total-header {
+          text-align: right;
+        }
       }
     }
     tbody {
@@ -52,7 +55,7 @@
     }
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
   .cart-list-wide {
     display: none;
   }
