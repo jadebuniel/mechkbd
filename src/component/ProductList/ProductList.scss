@@ -7,11 +7,11 @@
 }
 @media screen and (max-width: 635px) {
   .product-list {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
 }
 @media screen and (max-width: 386px) {
   .product-list {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }

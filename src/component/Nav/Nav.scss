@@ -12,7 +12,7 @@
     display: flex;
     padding-right: 2rem;
     padding-left: 1rem;
-    justify-content: space-between;
+    gap: 3rem;
     align-items: center;
     .logo {
       .hamburger {
@@ -21,16 +21,39 @@
           font-size: 1.5rem;
         }
       }
+      .cart-mobile {
+        display: none;
+      }
     }
     .nav-list {
       display: flex;
       gap: 2rem;
       height: unset;
       align-items: center;
+      margin-left: auto;
       .nav-item {
         &:hover {
           color: gray;
         }
+      }
+    }
+    .cart-wide {
+      font-size: 1.5rem;
+      position: relative;
+      .badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #fca311;
+        text-align: center;
+        font-size: 12px;
+        display: grid;
+        place-items: center;
+        color: white;
+        font-weight: 500;
       }
     }
   }
@@ -39,7 +62,7 @@
   .nav {
     position: fixed;
     .nav-container {
-      flex-direction: column;
+      // flex-direction: column;
       justify-content: space-between;
       .logo {
         display: flex;
@@ -48,6 +71,29 @@
         width: 100%;
         .hamburger {
           display: block;
+        }
+        .cart-mobile {
+          display: block;
+          font-size: 1.5rem;
+          position: relative;
+          .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #fca311;
+            text-align: center;
+            font-size: 12px;
+            display: grid;
+            place-items: center;
+            color: white;
+            font-weight: 500;
+          }
+        }
+        h1 {
+          justify-self: center;
         }
       }
       .nav-list {
@@ -62,8 +108,10 @@
         align-items: flex-start;
         .nav-item {
           text-align: left;
-          font-weight: 500;
         }
+      }
+      .cart-wide {
+        display: none;
       }
     }
   }

@@ -7,7 +7,7 @@ const BreadCrumbs = ({previous, page}) => {
   <div className="bread-crumbs">
     {previous.map((prev, index) => (
       <>
-        <Link to={prev.url} className="home">{prev.name}</Link>
+        <Link to={prev.url} className="home" key={index}>{prev.name}</Link>
         <span className="fas fa-chevron-right"></span>
       </>
     ))}

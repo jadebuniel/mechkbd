@@ -17,13 +17,12 @@ useEffect(() => {
 history.listen((location) => setLocation(location.pathname))
 }, [history])
 
-
-
 const fetchProducts = async () => {
  setLoading(true)
  const url = window.location.href.split('/')
  const { data } = await commerce.products.list()
  const catList = data.filter(product => product.categories[0].slug === url[url.length - 1])
+ 
   try {
    setProducts((categories.includes(url[url.length - 1])) ? catList : data)
     setLoading(false)
